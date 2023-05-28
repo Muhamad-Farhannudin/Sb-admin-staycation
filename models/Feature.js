@@ -6,7 +6,7 @@ const featureSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    qyt : {
+    qty : {
         type : Number,
         required : true
     },
