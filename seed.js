@@ -2,7 +2,7 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb+srv://codeathome:bwamern@cluster0-40j6e.mongodb.net/db_staycation?retryWrites=true&w=majority', {
+seeder.connect('mongodb://localhost:27017/db_staycation', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
@@ -20,7 +20,7 @@ seeder.connect('mongodb+srv://codeathome:bwamern@cluster0-40j6e.mongodb.net/db_s
     './models/Image',
     './models/Member',
     './models/Booking',
-    './models/Users'
+    './models/Users.js'
   ]);
 
   // Clear specified collections
@@ -503,14 +503,14 @@ var data = [
         nameBank: 'Mandiri',
         nomorRekening: '089898',
         name: 'elfin',
-        imageUrl: 'images/9999999999.png'
+        imageUrl: 'images/logo mandiri.png'
       },
       {
         _id: mongoose.Types.ObjectId('5e96cbe292b97300fc903323'),
         nameBank: 'BCA',
         nomorRekening: '878678',
         name: 'elfin',
-        imageUrl: 'images/9999999999.png'
+        imageUrl: 'images/logo bca.png'
       }
     ]
   },

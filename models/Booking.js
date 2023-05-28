@@ -17,7 +17,7 @@ const BookingSchema = new mongoose.Schema({
   itemId: {
     _id: {
       type: ObjectId,
-      ref: "Item",
+      ref: 'Item',
       required: true,
     },
     title: {
@@ -45,7 +45,7 @@ const BookingSchema = new mongoose.Schema({
     type: ObjectId,
     ref: "Bank",
   },
-  payment: {
+  payment: [{
     proofPayment: {
       type: String,
       required: true,
@@ -62,7 +62,7 @@ const BookingSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-  },
+  }],
 });
 
 module.exports = mongoose.model("Booking", BookingSchema);
